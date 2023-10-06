@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks Store</title>
+    <link rel="icon" type = "images/png" href="https://www.google.com/s2/u/0/favicons?domain=mikiyakobayashi.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>     
+   
+    </html>
+<body>
+<h1 id = "show-modal" title = "Add a bookmark">Add Bookmark</h1>    
+<!-- bookMarks -->
+<div class="container" id="bookmarks-container">
+
+</div>
+    <!-- building modal from scratch -->
+    <!-- parent container for overlay -->
+    <div class="modal-container " id = "modal">
+        <div class="modal">
+            <i class="fas fa-times close-icon" id="close-modal">
+            </i>
+            <div class="modal-header">
+                <h3>
+                    Add BookMark
+                </h3>
+            </div>
+            <div class="modal-content">
+                <form  id = "bookmark-form">
+                    <!-- Website Nmae -->
+                    <div class="form-group">
+                        <!-- good practice to have label for all input -->
+                        <label for="website-name" class="form-label">Website Name</label>
+                        <input type="text" class="form-input" id="website-name">
+                    </div>
+                    <!-- Website Nmae -->
+                    <div class="form-group">
+                        <!-- good practice to have label for all input -->
+                        <label for="website-url" class="form-label">Website URL</label>
+                        <input type="text" class="form-input" id="website-url">
+                    </div>
+                    <button  type = "submit" >Save</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+    <!-- Script  -->
+    <script  type = "text/javascript "src="script.js"></script>
+</body>
+</html>

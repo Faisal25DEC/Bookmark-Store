@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Ubuntu&display=swap');
+
+html{
+    /* prevents padding from adding extra width or height to page */
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    min-height:100vh;
+    background: var(--primary-color);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(186,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%2330AA9D'/%3E%3Cstop offset='1' stop-color='%231BB9FF'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1' gradientTransform='rotate(152,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23CCFF88' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23CCFF88' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2' gradientTransform='rotate(156,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23CCFF88' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23CCFF88' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family:Ubuntu,sans-serif;
+
+}
+:root{
+    --primary-color:#34a594;
+    --border-radius:5px;
+}
+h1{
+    color:aliceblue;
+    padding:10px;
+    text-align: center;
+    margin:20px auto 3px;
+    background:rgba(90, 89, 89, 0.5);
+    width:275px;
+}
+h1:hover{
+    cursor: pointer;
+    background:rgba(71, 70, 70, 0.8);
+}
+/* bookmarks */
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:30px;
+}
+.item{
+    background:rgba(90, 89, 89, 0.5);
+    color:aliceblue;
+    border-radius: var(--border-radius);
+    padding:10px 20px 20px;
+    margin:10px;
+
+}
+.item:hover{
+    background: rgba(83, 82, 82, 0.8);
+}
+a{
+    color:aliceblue;
+    font-size:20px;
+    font-weight:bold;
+    letter-spacing: normal;
+    text-decoration:none;
+
+}
+a:link,
+a:visited{
+    color:white;
+    text-decoration: none;
+}
+a:hover,
+a:active{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.fa-times-circle{
+    float:right;
+    z-index: 2;
+     cursor: pointer;
+}
+.name{
+    /* giving space to name so that it doesn't wrap */
+    margin-top:20px;
+    margin-right:20px;
+}
+.name img{
+    width:15px;
+    height:15px;
+    margin-right:5px;
+    margin-left:5px;
+    /* align image with text */
+    vertical-align: sub; 
+}
+
+/* modal styling */
+.modal-container{
+    color:rgba(1, 0, 0, 0.6);
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+.show-modal{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal{
+    background: white;
+    box-shadow:  0 0 10px rgba(0,0,0,0.8);
+    max-width: 500px;
+    width:500px;
+    animation:modalopen 1s;
+}
+.close-icon{
+    float: right;
+    color:white;
+    font-size:14px;
+    position:relative;
+    top:9px;
+    right:9px;
+    cursor:pointer;
+}
+.modal-header{
+    background: var(--primary-color);
+    color:white;
+    padding:15px;
+}
+h3{
+    margin:0;
+
+}
+.modal-content{
+    padding:20px;
+    background: whitesmoke;
+}
+.form-group{
+    height:55px;
+    margin-top: 7px;
+}
+.form-input{
+    width:97%;
+    padding:5px;
+    border:2px solid  var(--primary-color);
+}
+button{
+    cursor: pointer;
+    color:white;
+    height:30px;
+    width:100px;
+    border:none;
+    border-radius: var(--border-radius);
+    margin-top:10px;
+    background:var(--primary-color);
+}
+@keyframes modalopen {
+    from{
+        opacity:0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:600px){
+    .container{
+        flex-direction: column;
+    }
+}
